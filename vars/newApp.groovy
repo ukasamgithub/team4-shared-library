@@ -7,12 +7,10 @@ def uber(String repourl){
                     sh "free -g"
                 }
             }
-        }
-        stages{
             stage('checkout code'){
                 steps{
-                    git branch: 'main',
-                           url: "${repourl}"
+                     branch: 'main',
+                        url: "${repourl}"
                 }
             }
             stage('closing'){
