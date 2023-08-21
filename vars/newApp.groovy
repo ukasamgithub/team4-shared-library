@@ -3,7 +3,9 @@ def uber(String repourl){
         agent any
         stages{
             stage('1-build'){
-                sh "free -g"
+                steps{
+                    sh "free -g"
+                }
             }
         }
         stages{
